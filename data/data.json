@@ -7,6 +7,9 @@
     },
     "StatIDs": {
         "73": "primary",
+        "71": "primary",
+        "72": "agistr",
+        "5": "int",
         "7": "stam",
         "36": "haste",
         "40": "vers",

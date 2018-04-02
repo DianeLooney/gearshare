@@ -72,6 +72,10 @@ body {
     width:60px;
     text-align:right;
 }
+.col-socket{
+    width:80px;
+    text-align:center;
+}
 
 .item>.col-ilvl,
 .item>.col-primary,

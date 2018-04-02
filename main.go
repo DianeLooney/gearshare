@@ -124,7 +124,10 @@ func main() {
 	if err != nil {
 		log.Fatalf("Unable to execute template: %v\n", err)
 	}
-	ioutil.WriteFile("output/savedyabear.html", buf.Bytes(), 0666)
+	err = ioutil.WriteFile("output/savedyabear.html", buf.Bytes(), 0666)
+	if err != nil {
+		log.Fatalf("Unable to write to file: %v\n", err)
+	}
 }
 
 var templates map[string]*template.Template
@@ -242,7 +245,9 @@ type ItemInfo struct {
 		ID int `json:"id"`
 	} `json:"itemSet"`
 	//Enchant       int        `json:""`
-	//Sockets  []int      `json:""`
+	Sockets struct {
+		Sockets []struct{} `json:"sockets"`
+	} `json:"socketInfo"`
 	Quality  string `json:"context"`
 	SlotType int    `json:"inventoryType"`
 	Armor    int    `json:"armor"`
@@ -251,7 +256,6 @@ type ItemInfo struct {
 }
 
 func (i ItemInfo) TierBonus() string {
-	fmt.Println(i.Set)
 	if i.Set.ID != 0 {
 		l, ok := wowData.TierBonusIDs[i.Set.ID]
 		if ok {
@@ -260,6 +264,12 @@ func (i ItemInfo) TierBonus() string {
 		return "T??"
 	}
 	return ""
+}
+func (i ItemInfo) SocketCount() string {
+	if len(i.Sockets.Sockets) == 0 {
+		return ""
+	}
+	return strconv.Itoa(len(i.Sockets.Sockets))
 }
 
 type ItemStat struct {
@@ -470,9 +480,11 @@ func parseCharacterInfo(s string) (c *CharacterInfo) {
 			data, _ := ioutil.ReadAll(resp.Body)
 			err = json.Unmarshal(data, &itm)
 			if err != nil {
-				log.Fatalf("Unable to unmarshal response: %v\nResponse: %s\n", err, data)
+				//log.Fatalf("Unable to unmarshal response: %v\nResponse: %s\n", err, data)
 			}
-
+			if itm.Name == "Void Stalker's Contract" {
+				fmt.Println(itm.Stats)
+			}
 			c.Items[i] = itm
 		}(i, v)
 	}

@@ -1,8 +1,7 @@
 {{define "T"}}
 <html>
-
+ 
 <head>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
@@ -24,6 +23,7 @@
                     <span class="col-ilvl">ilvl</span>
                     <span class="col-primary">Primary</span>
                     <span class="col-primary">Stamina</span>
+                    <span class="col-socket">Sockets</span>
                     <span class="col-secondary">Crit</span>
                     <span class="col-secondary">Vers</span>
                     <span class="col-secondary">Haste</span>
@@ -38,10 +38,11 @@
                     <span class="col-icon">
                         <img src="http://wow.zamimg.com/images/wow/icons/large/{{.Icon}}.jpg" class="icon" />
                     </span>
-                    <span class="col-name">{{.Name}}</span>
+                    <span class="col-name">{{.Name}}</span> 
                     <span class="col-ilvl">{{.Level}}</span>
-                    <span class="col-primary">{{.GetStat "primary"}}</span>
+                    <span class="col-primary">{{.GetStat "primary"}}{{.GetStat "agi"}}{{.GetStat "agistr"}}</span>
                     <span class="col-primary">{{.GetStat "stam"}}</span>
+                    <span class="col-socket">{{.SocketCount}}</span>
                     <span class="col-secondary">{{.GetStat "crit"}}</span>
                     <span class="col-secondary">{{.GetStat "vers"}}</span>
                     <span class="col-secondary">{{.GetStat "haste"}}</span>
