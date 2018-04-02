@@ -1,0 +1,222 @@
+# SimC Addon 1.9.1
+
+druid="Savedyabear"
+level=110
+race=tauren
+region=us
+server=malganis
+role=tank
+professions=alchemy=1/herbalism=208
+talents=2112311
+spec=guardian
+artifact=57:0:0:0:0:948:4:949:4:950:4:951:4:952:4:953:4:954:4:955:4:956:4:957:1:958:1:959:1:960:1:961:1:962:1:979:1:1634:1:1510:1:1511:1:1512:18:1509:4:1334:1:1366:1
+crucible=1739:1774/1739:1780/1739:1778
+
+head=,id=133618,bonus_id=3536/1607/3337
+neck=,id=137487,enchant_id=5891,bonus_id=3536/1617/3337
+shoulder=,id=152129,bonus_id=3611/40/1487/3528
+back=,id=134405,enchant_id=5436,bonus_id=3536/1622/3337
+chest=,id=152124,bonus_id=3611/1507/3337
+wrist=,id=142146,bonus_id=3536/1562/3336
+hands=,id=134371,bonus_id=3536/1627/3337
+waist=,id=142196,bonus_id=3536/41/1577/3337
+legs=,id=137067,bonus_id=1811/3630
+feet=,id=151317,bonus_id=3536/41/1602/3336
+finger1=,id=151636,enchant_id=5427,gem_id=151580,bonus_id=1811/3630
+finger2=,id=142171,enchant_id=5429,bonus_id=3536/1582/3337
+trinket1=,id=137406,bonus_id=3536/1597/3336
+trinket2=,id=151307,bonus_id=3536/1607/3337
+main_hand=,id=128821,gem_id=152038/137544/152291,bonus_id=724,relic_id=3611:1487:3528/3536:1597:3336/3610:1472:3528
+off_hand=,id=128822
+
+### Gear from Bags
+#
+# Hood of the Blind Executioner (960)
+# head=,id=137511,bonus_id=3536/1612/3337
+#
+# Bearmantle Headdress (930)
+# head=,id=152127,bonus_id=3610/1472/3528
+#
+# Soulstarve Hood (950)
+# head=,id=134440,bonus_id=3536/1602/3336
+#
+# Corpse Feast Headwrap (960)
+# head=,id=137427,bonus_id=3536/1612/3337
+#
+# Wolfstride Pendant (950)
+# neck=,id=133633,bonus_id=3536/1602/3336
+#
+# Chain of the Green Flight (945)
+# neck=,id=137311,bonus_id=3536/1597/3336
+#
+# Chain of Scorched Bones (940)
+# neck=,id=134529,bonus_id=3536/1592/3528
+#
+# Aman'Thul's Wisdom (1000)
+# shoulder=,id=137072,bonus_id=1811/3630
+#
+# Mana-Saber Hide Shoulders (880)
+# shoulder=,id=134330,bonus_id=3394/1542/3528
+#
+# Bearmantle Cloak (925)
+# back=,id=152125,enchant_id=5436,bonus_id=3613/1467/3336
+#
+# Cape of the Duskwatch (945)
+# back=,id=137483,bonus_id=3536/1597/3336
+#
+# Bearmantle Cloak (945)
+# back=,id=152125,bonus_id=3611/1487/3528
+#
+# Vault Watcher's Cloak (870)
+# back=,id=136748,bonus_id=1824/1532/3528
+#
+# Bearmantle Harness (945)
+# chest=,id=152124,bonus_id=3611/41/1487/3528
+#
+# Ekowraith, Creator of Worlds (1000)
+# chest=,id=137015,bonus_id=1811/3630
+#
+# Biornskin Vest (945)
+# chest=,id=134197,bonus_id=3536/1607/3336
+#
+# Tunic of the Pitiless Monstrosity (940)
+# chest=,id=134438,bonus_id=3536/1808/1592/3528
+#
+# Biornskin Bracer (945)
+# wrist=,id=134192,bonus_id=3536/1607/3336
+#
+# Swordsinger's Wristguards (940)
+# wrist=,id=134280,bonus_id=3536/1602/3528
+#
+# Wristbands of Rousing Violence (940)
+# wrist=,id=134458,bonus_id=3536/1592/3528
+#
+# Bearmantle Paws (945)
+# hands=,id=152126,bonus_id=3611/1487/3528
+#
+# Brinewashed Leather Grips (940)
+# hands=,id=134239,bonus_id=3536/1602/3528
+#
+# Gravelworn Handguards (965)
+# hands=,id=134443,bonus_id=3536/42/1617/3337
+#
+# Glaivemaster's Studded Grips (940)
+# hands=,id=137509,bonus_id=3536/1592/3528
+#
+# Biornskin Belt (940)
+# waist=,id=134199,bonus_id=3536/1602/3528
+#
+# The Dark Titan's Advice (1000)
+# waist=,id=137078,bonus_id=3459/3630
+#
+# Swordsinger's Belt (960)
+# waist=,id=134287,bonus_id=3536/1622/3337
+#
+# Brinewashed Leather Pants (960)
+# legs=,id=134238,bonus_id=3536/42/1622/3337
+#
+# Legwraps of Unworthy Souls (940)
+# legs=,id=133616,bonus_id=3536/1592/3528
+#
+# Bearmantle Legguards (930)
+# legs=,id=152128,bonus_id=3610/1472/3528
+#
+# Depraved Machinist's Footpads (945)
+# feet=,id=152412,bonus_id=3611/1487/3528
+#
+# Brinewashed Leather Boots (960)
+# feet=,id=134237,bonus_id=3536/1622/3337
+#
+# Footpads of Seeping Dread (955)
+# feet=,id=151317,gem_id=151584,bonus_id=3536/1808/1607/3337
+#
+# Essence of Infusion (1000)
+# feet=,id=137026,bonus_id=3459/3630
+#
+# Dual Determination (1000)
+# finger1=,id=137041,bonus_id=1811/3630
+#
+# Ring of Minute Mirrors (950)
+# finger1=,id=137533,enchant_id=5429,gem_id=151584,bonus_id=3536/1808/1602/3336
+#
+# Utgarde Royal Signet (960)
+# finger1=,id=133637,enchant_id=5429,bonus_id=3536/1612/3337
+#
+# Ring of Minute Mirrors (940)
+# finger1=,id=137533,bonus_id=3536/1592/3528
+#
+# Loop of Vitriolic Intent (940)
+# finger1=,id=134530,bonus_id=3536/1592/3528
+#
+# Band of the Triumvirate (940)
+# finger1=,id=151311,enchant_id=5429,bonus_id=3536/1592/3528
+#
+# Tearstone of Elune (1000)
+# finger1=,id=137042,bonus_id=1811/3630
+#
+# Grasping Tentacle Loop (945)
+# finger1=,id=133634,enchant_id=5429,bonus_id=3536/1597/3336
+#
+# Band of the Sargerite Smith (945)
+# finger1=,id=152064,bonus_id=3611/1487/3528
+#
+# Seal of the Portalmaster (950)
+# finger1=,id=152063,bonus_id=3611/1492/3336
+#
+# Signet of the Highborne Magi (940)
+# finger1=,id=134537,bonus_id=3536/1808/1592/3528
+#
+# Band of the Wyrm Matron (940)
+# finger1=,id=134524,bonus_id=3536/1592/3528
+#
+# Mac'Aree Seal of Nobility (945)
+# finger1=,id=151308,enchant_id=5429,bonus_id=3536/1597/3336
+#
+# Grasping Tentacle Loop (940)
+# finger1=,id=133634,bonus_id=3536/1592/3528
+#
+# Astral Alchemist Stone (935)
+# trinket1=,id=151607,bonus_id=3609/600/3608
+#
+# Faith's Crucible (950)
+# trinket1=,id=142158,bonus_id=3417/1567/3337
+#
+# Garothi Feedback Conduit (930)
+# trinket1=,id=151956,bonus_id=3610/1472/3528
+#
+# Tarratus Keystone (945)
+# trinket1=,id=151958,bonus_id=3611/1487/3528
+#
+# Flask of the Solemn Night (945)
+# trinket1=,id=137484,bonus_id=3536/1597/3336
+#
+# Carafe of Searing Light (930)
+# trinket1=,id=151960,bonus_id=3610/1472/3528
+#
+# Venerable Triad Statuette (910)
+# trinket1=,id=152782,bonus_id=3573/1502/3528
+#
+# Chrono Shard (910)
+# trinket1=,id=137419,bonus_id=3573/1562/3528
+#
+# Darkmoon Deck: Promises (900)
+# trinket1=,id=128710,bonus_id=689/600/679
+#
+# Smoldering Titanguard (945)
+# trinket1=,id=151978,bonus_id=3611/1487/3528
+#
+# Coagulated Nightwell Residue (940)
+# trinket1=,id=137400,bonus_id=3536/1808/1592/3528
+#
+# Ampoule of Pure Void (915)
+# trinket1=,id=151312,bonus_id=3573/41/1567/3336
+#
+# Dominant Combatant's Accolade of Dominance (910)
+# trinket1=,id=149961,bonus_id=3573/603/1572/3528
+#
+# Highfather's Machination (930)
+# trinket1=,id=152289,bonus_id=3610/1472/3528
+#
+# Stolen Mana Crystal (910)
+# trinket1=,id=134336,bonus_id=3573/1808/603/1572/3528
+#

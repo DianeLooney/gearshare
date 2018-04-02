@@ -1,0 +1,82 @@
+
+.gearslot {
+    display: flex;
+    flex-direction:column;
+}
+.header {
+    display:flex;
+    flex-direction:row;
+}
+.item {
+    display:flex;
+    flex-direction:row;
+    line-height:34px;
+    margin:2px;
+}
+.col-icon {
+    width:50px;
+}
+.col-icon>img {
+    display:block;
+    margin:auto;
+}
+
+.item-equipped {
+    background-color: rgb(96, 0, 147);
+    border: 1px solid orange;
+}
+.item-unequipped {
+    background-color: rgb(48, 0, 73);
+} 
+.quality-legiondary.item-equipped {
+    background-color: rgb(161, 89, 30);
+    border: 1px solid orange;
+}
+.quality-legiondary.item-unequipped {
+    background-color: rgb(80, 45, 15);
+} 
+.icon {
+    width:32px;
+    height:32px;
+    padding:2px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:rgb(80,80,80);
+    color:rgb(200,200,200);
+} 
+.col-tier{
+    width:40px;
+    font-weight:bolder;
+    text-align:center;
+}
+.col-icon {
+    width:40px;
+}
+.col-name {
+    width:200px;
+}
+.col-ilvl {
+    width:40px;
+    text-align:right;
+}
+.col-primary {
+    width:80px;
+    text-align:right;
+}
+.col-secondary {
+    width:60px;
+    text-align:right;
+}
+.col-tertiary {
+    width:60px;
+    text-align:right;
+}
+
+.item>.col-ilvl,
+.item>.col-primary,
+.item>.col-secondary,
+.item>.col-tertiary{
+    font-family: 'Roboto Mono', monospace;
+    
+}

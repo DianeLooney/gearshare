@@ -1,0 +1,61 @@
+{
+    "TierBonusIDs": {
+        "1328":"T21",
+        "1293":"MotL",
+        "1331":"VL",
+        "1294":"JTT"
+    },
+    "StatIDs": {
+        "73": "primary",
+        "7": "stam",
+        "36": "haste",
+        "40": "vers",
+        "32": "crit",
+        "49": "mast",
+        "61": "speed",
+        "62": "leech",
+        "63": "avoid"
+    },
+    "StatPrimary": [
+        "primary",
+        "stam"
+    ],
+    "StatSecondary": [
+        "haste",
+        "vers",
+        "crit",
+        "mast"
+    ],
+    "StatTertiary": [
+        "leech",
+        "avoid"
+    ],
+    "I18N": {
+        "en_US": {
+            "head": "Head",
+            "neck": "Neck",
+            "shoulders": "Shoulders",
+            "back": "Back",
+            "chest": "Chest",
+            "wrists": "Wrists",
+            "hands": "Hands",
+            "waist": "Waist",
+            "legs": "Legs",
+            "feet": "Feet",
+            "finger1": "Finger 1",
+            "finger2": "Finger 2",
+            "trinket1": "Trinket 1",
+            "trinket2": "Trinket 2",
+            "primary": "Primary",
+            "stam": "Stamina",
+            "haste": "Haste",
+            "vers": "Versatility",
+            "crit": "Critical Strike",
+            "mast": "Mastery",
+            "leech": "Leech",
+            "avoid": "Avoidance",
+            "t21_shortname": "T21",
+            "t21_longname": "Antorus Tier Set"
+        }
+    }
+}
