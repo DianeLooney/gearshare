@@ -14,11 +14,30 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+	"time"
 )
 
+// note: 1/2 the number of allotted calls, twice the interval between call batches
+const wowAPIBlockingSize = 50
+const wowAPIBlockingDuration = 2 * time.Second
+
+func waitForAPIThrottle() {
+	<-wowAPIThrottle
+	go func() {
+		time.Sleep(wowAPIBlockingDuration)
+		wowAPIThrottle <- struct{}{}
+	}()
+
+}
+
+var wowAPIThrottle chan struct{}
 var wowAPIKey string
 
 func init() {
+	wowAPIThrottle = make(chan struct{}, wowAPIBlockingSize)
+	for i := 0; i < wowAPIBlockingSize; i++ {
+		wowAPIThrottle <- struct{}{}
+	}
 	wowAPIKey = ""
 
 	data, err := ioutil.ReadFile("data/data.json")
@@ -390,7 +409,7 @@ func parseCharacterInfo(s string) (c *CharacterInfo) {
 				z := strings.Split(v, ":")
 				if len(z) != 2 {
 					continue
-					log.Fatalf("Unable to parse crucible data\n")
+					//log.Fatalf("Unable to parse crucible data\n")
 				}
 				a, _ := strconv.Atoi(z[0])
 				b, _ := strconv.Atoi(z[1])
@@ -414,18 +433,21 @@ func parseCharacterInfo(s string) (c *CharacterInfo) {
 				strs[i] = strconv.Itoa(v)
 			}
 			url := fmt.Sprintf(`https://us.api.battle.net/wow/item/%v?locale=%v&bl=%v&apikey=%v`, itm.ID, "en_US", strings.Join(strs, ","), wowAPIKey)
+			waitForAPIThrottle()
 			resp, err := http.Get(url)
 			if err != nil {
-				log.Fatalf("Unable to get url '%v': %v\n", url, err)
+				log.Fatalf("Unable to get url '%v': %v\n(usually you just have to run it again)", url, err)
 			}
 			data, _ := ioutil.ReadAll(resp.Body)
 			err = json.Unmarshal(data, &itm)
 			if err != nil {
 				//log.Fatalf("Unable to unmarshal response: %v\nResponse: %s\n", err, data)
 			}
-			if itm.Name == "Void Stalker's Contract" {
-				fmt.Println(itm.Stats)
-			}
+			/*
+				if itm.Name == "Void Stalker's Contract" {
+					fmt.Println(itm.Stats)
+				}
+			*/
 			c.Items[i] = itm
 		}(i, v)
 	}
