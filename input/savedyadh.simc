@@ -1,0 +1,204 @@
+# SimC Addon 1.9.1
+
+demonhunter="Savedyadh"
+level=110
+race=blood_elf
+region=us
+server=malganis
+role=tank
+professions=herbalism=687/skinning=484
+talents=1322231
+spec=vengeance
+artifact=60:0:0:0:0:1096:1:1328:1:1097:1:1363:1:1098:1:1099:4:1100:4:1434:1:1101:4:1497:4:1498:1:1499:1:1500:26:1236:1:1235:1:1228:1:1229:4:1230:4:1231:4:1232:4:1233:4:1234:4:1631:1
+crucible=1739:1770:1099/1739:1780:1100/1739:1778:1229
+
+head=,id=137427,bonus_id=3536/1617/3337
+neck=,id=137461,enchant_id=5437,gem_id=151580,bonus_id=3536/1808/1617/3337
+shoulder=,id=151988,bonus_id=3611/1507/3337
+back=,id=151937,enchant_id=5435,bonus_id=3611/1487/3528
+chest=,id=152118,bonus_id=3611/1487/3528
+wrist=,id=151315,bonus_id=3536/42/1612/3337
+hands=,id=139242,bonus_id=3536/1622/3337
+waist=,id=133976,bonus_id=1811/3630
+legs=,id=151799,bonus_id=3459/3630
+feet=,id=134442,bonus_id=3536/1617/3337
+finger1=,id=134528,enchant_id=5427,bonus_id=3536/41/1602/3336
+finger2=,id=152284,enchant_id=5427,bonus_id=3610/1487/3337
+trinket1=,id=151976,gem_id=151580,bonus_id=3611/1808/1487/3528
+trinket2=,id=137406,bonus_id=3536/1597/3336
+main_hand=,id=128832,gem_id=147100/137303/155848,bonus_id=721,relic_id=3563:1517:3336/3536:1612:3337/3611:1507:3336
+off_hand=,id=128831
+
+### Gear from Bags
+#
+# Tranquil Bough Hood (960)
+# head=,id=139070,bonus_id=3536/1622/3337
+#
+# Voidlashed Hood (950)
+# head=,id=151336,bonus_id=3418/1602/3337
+#
+# Tranquil Bough Hood (960)
+# head=,id=139070,bonus_id=3536/1622/3337
+#
+# Dominant Gladiator's Necklace (905)
+# neck=,id=148523,bonus_id=3581/1537/3336
+#
+# Prydaz, Xavaric's Magnum Opus (1000)
+# neck=,id=132444,enchant_id=5889,bonus_id=1811/3630
+#
+# Mantle of the Dark Sea (940)
+# shoulder=,id=137332,bonus_id=3536/1592/3528
+#
+# Delusions of Grandeur (970)
+# shoulder=,id=144279,bonus_id=1811/3570
+#
+# Runemaster's Pauldrons (1000)
+# shoulder=,id=137071,bonus_id=3459/3630
+#
+# Demonbane Shroud (930)
+# back=,id=147128,enchant_id=5435,bonus_id=3563/1512/3528
+#
+# Iceblood Shroud (865)
+# back=,id=134411,bonus_id=1726/1517/3528
+#
+# Chaos Theory (1000)
+# back=,id=151798,enchant_id=5435,bonus_id=3459/3630
+#
+# Cloak of Sweltering Flame (935)
+# back=,id=142206,enchant_id=5435,bonus_id=3418/1552/3337
+#
+# Hide of the Abyssal Behemoth (945)
+# chest=,id=147028,bonus_id=3563/1527/3337
+#
+# Fiendish Logistician's Wristwraps (915)
+# wrist=,id=151992,bonus_id=3613/1457/3528
+#
+# Flame Juggler's Armbands (865)
+# wrist=,id=137512,bonus_id=1726/1517/3528
+#
+# The Defiler's Lost Vambraces (970)
+# wrist=,id=137091,bonus_id=1811/3570
+#
+# Mo'arg Bionic Stabilizers (970)
+# wrist=,id=137090,bonus_id=3459/3570
+#
+# Thermal Bindings (940)
+# wrist=,id=134461,gem_id=151580,bonus_id=3536/1808/1592/3528
+#
+# Guileful Intruder Handguards (935)
+# hands=,id=137480,bonus_id=3418/1587/3337
+#
+# Spirit of the Darkness Flame (970)
+# hands=,id=144292,bonus_id=3459/3570
+#
+# Felreaper Gloves (920)
+# hands=,id=152120,bonus_id=3613/1462/3336
+#
+# Cerulean Shadowfade Belt (960)
+# waist=,id=144486,bonus_id=3536/1612/3337
+#
+# Biornskin Belt (870)
+# waist=,id=134199,bonus_id=1726/1532/3336
+#
+# Sash of the Twilight Princess (960)
+# waist=,id=134457,bonus_id=3535/1612/3337
+#
+# Biornskin Leggings (960)
+# legs=,id=134194,bonus_id=3536/1622/3337
+#
+# Willbreaker Legguards (960)
+# legs=,id=142143,bonus_id=3536/1577/3337
+#
+# Felreaper Leggings (945)
+# legs=,id=152122,bonus_id=3611/1487/3528
+#
+# Felreaper Leggings (915)
+# legs=,id=152122,bonus_id=3613/1457/3528
+#
+# Bleak Underworld Treads (935)
+# feet=,id=137324,bonus_id=3418/1587/3337
+#
+# Tunnel Trudger Footguards (940)
+# feet=,id=137397,bonus_id=3536/40/1592/3528
+#
+# Tooled Rivermoor Boots (930)
+# feet=,id=134442,gem_id=151580,bonus_id=3536/1808/41/1582/3337
+#
+# Kirel Narak (970)
+# feet=,id=138949,bonus_id=1811/3570
+#
+# Sullied Seal of the Pantheon (940)
+# finger1=,id=151972,bonus_id=3610/1472/3528
+#
+# Insignia of the Grand Army (1000)
+# finger1=,id=152626,enchant_id=5427,gem_id=151580,bonus_id=3459/3630
+#
+# Fragment of the Betrayer's Prison (1000)
+# finger1=,id=138854,bonus_id=3459/3630
+#
+# Band of Twisted Bark (960)
+# finger1=,id=134531,bonus_id=3536/1612/3337
+#
+# Soul of the Slayer (1000)
+# finger1=,id=151639,enchant_id=5427,gem_id=151580,bonus_id=3459/3630
+#
+# Feverish Carapace (915)
+# trinket1=,id=147022,bonus_id=3562/1497/3528
+#
+# Majordomo's Dinner Bell (915)
+# trinket1=,id=142168,bonus_id=3418/1532/3528
+#
+# Darkmoon Deck: Immortality (900)
+# trinket1=,id=128711,bonus_id=689/601/679
+#
+# An'she's Token of Guile (910)
+# trinket1=,id=139113,bonus_id=3573/603/1572/3528
+#
+# Shifting Cosmic Sliver (900)
+# trinket1=,id=147026,bonus_id=3564/1808/1482/3336
+#
+# Ember of Nullification (895)
+# trinket1=,id=136978,bonus_id=1727/1547/3336
+#
+# Umbral Moonglaives (915)
+# trinket1=,id=147012,bonus_id=3562/1497/3528
+#
+# Aggramar's Conviction (960)
+# trinket1=,id=154173,bonus_id=3985/3989
+#
+# Windscar Whetstone (950)
+# trinket1=,id=137486,bonus_id=3536/1602/3336
+#
+# Archimonde's Hatred Reborn (1000)
+# trinket1=,id=144249,bonus_id=3459/3630
+#
+# Memento of Angerboda (925)
+# trinket1=,id=133644,bonus_id=3418/1577/3336
+#
+# Windscar Whetstone (915)
+# trinket1=,id=137486,bonus_id=3535/1567/3336
+#
+# Writhing Heart of Darkness (915)
+# trinket1=,id=137315,bonus_id=3418/1567/3528
+#
+# Unstable Arcanocrystal (860)
+# trinket1=,id=141482,bonus_id=3466/1472/3528
+#
+# Beguiler's Talisman (925)
+# trinket1=,id=147275,bonus_id=607/3573/3174/3337
+#
+# Eye of Guarm (920)
+# trinket1=,id=142506,bonus_id=3573/603/1537/3336
+#
+# Ember of Nullification (915)
+# trinket1=,id=136978,bonus_id=3573/1567/3336
+#
+# Reliquary of the Damned (930)
+# trinket1=,id=147024,bonus_id=3563/1512/3528
+#
+# Tome of Unraveling Sanity (925)
+# trinket1=,id=147019,bonus_id=3562/1507/3528
+#
+# Dominant Gladiator's Badge of Conquest (900)
+# trinket1=,id=148599,bonus_id=3581/1532/3528
+#

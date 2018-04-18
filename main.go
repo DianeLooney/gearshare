@@ -19,7 +19,7 @@ import (
 var wowAPIKey string
 
 func init() {
-	wowAPIKey = "dontstealmykeyplsty"
+	wowAPIKey = ""
 
 	data, err := ioutil.ReadFile("data/data.json")
 	if err != nil {
@@ -34,83 +34,23 @@ func init() {
 	if err != nil {
 		log.Fatalf("Unable to parse template at %v: %v\n", "templates/playergear.html.tmpl", err)
 	}
-	rgxSimcItemCommented, err = regexp.Compile(`^\s*[#]+\s*(head|neck|shoulder|back|chest|wrist|hands|waist|legs|feet|finger1|finger2|trinket1|trinket2|main_hand|off_hand)=(.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-itemcomment: %v\n", err)
-	}
-	rgxSimcItem, err = regexp.Compile(`^\s*(head|neck|shoulder|back|chest|wrist|hands|waist|legs|feet|finger1|finger2|trinket1|trinket2|main_hand|off_hand)=(.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-item: %v\n", err)
-	}
-	rgxSimcComment, err = regexp.Compile(`^\s*[#](.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-comment: %v\n", err)
-	}
-	rgxSimcClassName, err = regexp.Compile(`^\s*(druid)=(".*"|.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-classname: %v\n", err)
-	}
-	rgxSimcLevel, err = regexp.Compile(`^\s*level=(.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-level: %v\n", err)
-	}
-	rgxSimcRace, err = regexp.Compile(`^\s*race=(.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-race: %v\n", err)
-	}
-	rgxSimcRegion, err = regexp.Compile(`^\s*region=(.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-region: %v\n", err)
-	}
-	rgxSimcSpec, err = regexp.Compile(`^\s*spec=(.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-spec: %v\n", err)
-	}
-	rgxSimcServer, err = regexp.Compile(`^\s*server=(.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-server: %v\n", err)
-	}
-	rgxSimcRole, err = regexp.Compile(`^\s*role=(.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regex for simc-server: %v\n", err)
-	}
-	rgxSimcProfessions, err = regexp.Compile(`^\s*professions=(.*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regexp for simc-professions: %v\n", err)
-	}
-	rgxSimcTalents, err = regexp.Compile(`^\s*talents=([0123])*$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regexp for simc-professions: %v\n", err)
-	}
-	rgxSimcArtifact, err = regexp.Compile(`^\s*artifact=([0-9:]*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regexp for simc-artifact: %v\n", err)
-	}
-	rgxSimcCrucible, err = regexp.Compile(`^\s*crucible=([0-9:/]*)$`)
-	if err != nil {
-		log.Fatalf("Unable to compile regexp for simc-artifact: %v\n", err)
-	}
-	rgxSimcItemArg, err = regexp.Compile(`^([a-z_A-Z]*)=([^,]*)`)
-	if err != nil {
-		log.Fatalf("Unable to compile regexp for simc-itemarg: %v\n", err)
-	}
 }
 
-var rgxSimcArtifact *regexp.Regexp
-var rgxSimcCrucible *regexp.Regexp
-var rgxSimcProfessions *regexp.Regexp
-var rgxSimcRole *regexp.Regexp
-var rgxSimcRace *regexp.Regexp
-var rgxSimcRegion *regexp.Regexp
-var rgxSimcSpec *regexp.Regexp
-var rgxSimcServer *regexp.Regexp
-var rgxSimcClassName *regexp.Regexp
-var rgxSimcLevel *regexp.Regexp
-var rgxSimcItem *regexp.Regexp
-var rgxSimcItemCommented *regexp.Regexp
-var rgxSimcItemArg *regexp.Regexp
-var rgxSimcComment *regexp.Regexp
-var rgxSimcTalents *regexp.Regexp
+var rgxSimcArtifact = regexp.MustCompile(`^\s*artifact=([0-9:]*)$`)
+var rgxSimcCrucible = regexp.MustCompile(`^\s*crucible=([0-9:/]*)$`)
+var rgxSimcProfessions = regexp.MustCompile(`^\s*professions=(.*)$`)
+var rgxSimcRole = regexp.MustCompile(`^\s*role=(.*)$`)
+var rgxSimcRace = regexp.MustCompile(`^\s*race=(.*)$`)
+var rgxSimcRegion = regexp.MustCompile(`^\s*region=(.*)$`)
+var rgxSimcSpec = regexp.MustCompile(`^\s*spec=(.*)$`)
+var rgxSimcServer = regexp.MustCompile(`^\s*server=(.*)$`)
+var rgxSimcClassName = regexp.MustCompile(`^\s*(druid|demonhunter)=(".*"|.*)$`)
+var rgxSimcLevel = regexp.MustCompile(`^\s*level=(.*)$`)
+var rgxSimcItem = regexp.MustCompile(`^\s*(head|neck|shoulder|back|chest|wrist|hands|waist|legs|feet|finger1|finger2|trinket1|trinket2|main_hand|off_hand)=(.*)$`)
+var rgxSimcItemCommented = regexp.MustCompile(`^\s*[#]+\s*(head|neck|shoulder|back|chest|wrist|hands|waist|legs|feet|finger1|finger2|trinket1|trinket2|main_hand|off_hand)=(.*)$`)
+var rgxSimcItemArg = regexp.MustCompile(`^([a-z_A-Z]*)=([^,]*)`)
+var rgxSimcComment = regexp.MustCompile(`^\s*[#](.*)$`)
+var rgxSimcTalents = regexp.MustCompile(`^\s*talents=([0123])*$`)
 
 func main() {
 	d, err := ioutil.ReadFile("input/savedyabear-resto.simc")
@@ -124,7 +64,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Unable to execute template: %v\n", err)
 	}
-	err = ioutil.WriteFile("output/savedyabear.html", buf.Bytes(), 0666)
+	err = ioutil.WriteFile("output/savedyabear-resto.html", buf.Bytes(), 0666)
 	if err != nil {
 		log.Fatalf("Unable to write to file: %v\n", err)
 	}
@@ -449,6 +389,7 @@ func parseCharacterInfo(s string) (c *CharacterInfo) {
 			for _, v := range y {
 				z := strings.Split(v, ":")
 				if len(z) != 2 {
+					continue
 					log.Fatalf("Unable to parse crucible data\n")
 				}
 				a, _ := strconv.Atoi(z[0])
